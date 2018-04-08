@@ -33,6 +33,7 @@
             this.HumanVComp_button = new System.Windows.Forms.Button();
             this.HumanVHuman_button = new System.Windows.Forms.Button();
             this.Exit_button = new System.Windows.Forms.Button();
+            this.CompVComp_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // MainMenu_Label
@@ -53,7 +54,7 @@
             this.HumanVComp_button.BackColor = System.Drawing.SystemColors.Menu;
             this.HumanVComp_button.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HumanVComp_button.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.HumanVComp_button.Location = new System.Drawing.Point(276, 210);
+            this.HumanVComp_button.Location = new System.Drawing.Point(276, 282);
             this.HumanVComp_button.Name = "HumanVComp_button";
             this.HumanVComp_button.Size = new System.Drawing.Size(209, 47);
             this.HumanVComp_button.TabIndex = 1;
@@ -65,7 +66,7 @@
             // 
             this.HumanVHuman_button.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HumanVHuman_button.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.HumanVHuman_button.Location = new System.Drawing.Point(276, 289);
+            this.HumanVHuman_button.Location = new System.Drawing.Point(276, 212);
             this.HumanVHuman_button.Name = "HumanVHuman_button";
             this.HumanVHuman_button.Size = new System.Drawing.Size(209, 47);
             this.HumanVHuman_button.TabIndex = 2;
@@ -77,7 +78,7 @@
             // 
             this.Exit_button.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit_button.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Exit_button.Location = new System.Drawing.Point(276, 365);
+            this.Exit_button.Location = new System.Drawing.Point(276, 462);
             this.Exit_button.Name = "Exit_button";
             this.Exit_button.Size = new System.Drawing.Size(209, 47);
             this.Exit_button.TabIndex = 3;
@@ -85,12 +86,26 @@
             this.Exit_button.UseVisualStyleBackColor = true;
             this.Exit_button.Click += new System.EventHandler(this.Exit_click);
             // 
+            // CompVComp_button
+            // 
+            this.CompVComp_button.BackColor = System.Drawing.SystemColors.Menu;
+            this.CompVComp_button.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompVComp_button.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.CompVComp_button.Location = new System.Drawing.Point(276, 350);
+            this.CompVComp_button.Name = "CompVComp_button";
+            this.CompVComp_button.Size = new System.Drawing.Size(209, 47);
+            this.CompVComp_button.TabIndex = 4;
+            this.CompVComp_button.Text = "Computer VS Computer";
+            this.CompVComp_button.UseVisualStyleBackColor = false;
+            this.CompVComp_button.Click += new System.EventHandler(this.CompVComp_click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.CompVComp_button);
             this.Controls.Add(this.Exit_button);
             this.Controls.Add(this.HumanVHuman_button);
             this.Controls.Add(this.HumanVComp_button);
@@ -112,6 +127,7 @@
         private System.Windows.Forms.Button HumanVComp_button;
         private System.Windows.Forms.Button HumanVHuman_button;
         private System.Windows.Forms.Button Exit_button;
+        private System.Windows.Forms.Button CompVComp_button;
     }
 }
 

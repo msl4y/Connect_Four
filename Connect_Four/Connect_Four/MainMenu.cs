@@ -21,37 +21,6 @@ namespace Connect_Four
         {
 
         }
-
-        private void HumanVComp_click(object sender, EventArgs e)
-        {
-            // user chooses computer difficulty
-            difficulty d = new difficulty();
-            d.ShowDialog();
-            int game_difficulty = difficulty.SetTheDifficulty;
-
-
-            // user can choose a game size
-            size s = new size();
-            s.ShowDialog();
-            int game_size = size.SetTheSize;
-            int rows = getRows(game_size);
-            int cols = getCols(game_size);
-            s.Hide();
-
-            // if the menus weren't closed
-            if (game_size != 0 && game_difficulty != 0)
-            {
-                // make the gameboard and start playing
-                GameBoard game = new GameBoard(2, game_difficulty, rows, cols);
-                if (game_size == 1)
-                    game.Size = new Size(600, 450);
-                else if (game_size == 3)
-                    game.Size = new Size(1200, 900);
-                game.Show();
-                this.Hide();
-            }
-        }
-
         private void HumanVHuman_click(object sender, EventArgs e)
         {
             // user can choose a game size
@@ -65,13 +34,79 @@ namespace Connect_Four
             if (game_size != 0)
             {
                 // make the gameboard and start playing
-                GameBoard game = new GameBoard(2, 0, rows, cols);
+                GameBoard game = new GameBoard(2, "", "", rows, cols);
                 if (game_size == 1)
                     game.Size = new Size(600, 450);
                 else if (game_size == 3)
                     game.Size = new Size(1200, 900);
                 game.Show();
                 this.Hide();
+            }
+        }
+
+        private void HumanVComp_click(object sender, EventArgs e)
+        {
+            // user chooses computer difficulty
+            difficulty d = new difficulty("Pick AI");
+            d.ShowDialog();
+            string AI = difficulty.PickAI;
+
+
+            // user can choose a game size
+            size s = new size();
+            s.ShowDialog();
+            int game_size = size.SetTheSize;
+            int rows = getRows(game_size);
+            int cols = getCols(game_size);
+            s.Hide();
+
+            // if the menus weren't closed
+            if (game_size != 0 && AI != "")
+            {
+                // make the gameboard and start playing
+                GameBoard game = new GameBoard(1, AI, "", rows, cols);
+                if (game_size == 1)
+                    game.Size = new Size(600, 450);
+                else if (game_size == 3)
+                    game.Size = new Size(1200, 900);
+                game.Show();
+                this.Hide();
+            }
+        }
+
+        private void CompVComp_click(object sender, EventArgs e)
+        {
+            string AIone_choice = "";
+            string AItwo_choice = "";
+
+            // user chooses computer AI #1 difficulty
+            difficulty AIone = new difficulty("Pick AI 1");
+            AIone.ShowDialog();
+            AIone_choice = difficulty.PickAI;
+
+            // user chooses computer AI #2 difficulty
+            difficulty AItwo = new difficulty("Pick AI 2");
+            AItwo.ShowDialog();
+            AItwo_choice = difficulty.PickAI;
+
+            // user can choose a game size
+            size s = new size();
+            s.ShowDialog();
+            int game_size = size.SetTheSize;
+            int rows = getRows(game_size);
+            int cols = getCols(game_size);
+            s.Hide();
+
+            // if the menus weren't closed
+            if (game_size != 0 && AIone_choice != "" && AItwo_choice != "")
+            {
+                // make the gameboard and start playing
+                GameBoard game = new GameBoard(0, AIone_choice, AItwo_choice, rows, cols);
+                if (game_size == 1)
+                    game.Size = new Size(600, 450);
+                else if (game_size == 3)
+                    game.Size = new Size(1200, 900);
+                game.Show();
             }
         }
 
@@ -105,5 +140,6 @@ namespace Connect_Four
             else
                 return 10;
         }
+
     }
 }

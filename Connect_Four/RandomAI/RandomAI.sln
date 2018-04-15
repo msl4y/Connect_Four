@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomAIApp", "RandomAIApp\RandomAIApp.csproj", "{BDA77613-608C-4542-A0B8-53E383AFB365}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDA77613-608C-4542-A0B8-53E383AFB365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDA77613-608C-4542-A0B8-53E383AFB365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDA77613-608C-4542-A0B8-53E383AFB365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDA77613-608C-4542-A0B8-53E383AFB365}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30D69D4C-4E53-4960-BA0B-9CC0AC0B47B0}
+	EndGlobalSection
+EndGlobal
